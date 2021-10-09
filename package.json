@@ -1,0 +1,14 @@
+{
+  "name": "shopezy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^15.1.2"
+  }
+}
