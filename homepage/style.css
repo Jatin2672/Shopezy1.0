@@ -60,6 +60,7 @@ body{
     position: relative;
     bottom: 20px;
     padding: 0px 4px;
+    color: rgb(216, 218, 216);
 }
 .btn{
     color: white;
