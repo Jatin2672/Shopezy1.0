@@ -15,10 +15,11 @@
 .item{
     padding: 2px;
     color: white;
+    filter: grayscale(100%);
 }
 
 .item:hover{
-    background-color:blue;
+    filter: grayscale(0%);
     /* border: 1px solid rgb(192, 192, 192); */
 }
 .group:hover{
