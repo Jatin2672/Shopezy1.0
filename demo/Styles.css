@@ -15,7 +15,7 @@
 .item{
     padding: 2px;
     color: white;
-    filter: grayscale(100%);
+    filter: grayscale(100%) brightness(200%);
 }
 
 .item:hover{
