@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    background-color: #191919;
+    flex-direction: column;
+    width: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0px;
+    height: 100vh;
+}
+.item{
+    padding: 2px;
+    color: white;
+}
+
+.item:hover{
+    background-color:blue;
+    /* border: 1px solid rgb(192, 192, 192); */
+}
+.group:hover{
+    background-color: none;
+}
