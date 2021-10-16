@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    background-image: url("../homepage/image/bg_pic.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 75vw;
+    height: 80vh;
+    background-color: #36393F;
+    border-radius: 8px;
+    margin-top: 80px;
+    margin-left: 150px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 4px 4px #36393F;
+}
+.first{
+    width: 50%;
+    padding-left: 50px;
+    padding-top: 50px;
+    border-right: 1px solid black;
+    
+}
+.second{
+    padding-left: 50px;
+    padding-top: 50px;
+    width: 50%;
+}
+h1{
+    text-align: center;
+    font-weight: normal;
+}
+.link{
+    text-decoration: none;
+    color:  #01C7F2;
+}
+#input{
+    background: #303339;
+    border: 1px solid #222428;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 40px;
+    width: 415px;
+    color: white;
+}
+#Address{
+    background: #303339;
+    border: 1px solid #222428;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 125px;
+    width: 415px;
+    color: white;
+    resize: none;
+}
+.submit{
+    margin: 10px 0px;
+    height: 40px;
+    width: 415px;
+    border-radius: 4px;
+    color: white;
+    background-color: #4088f3d3;
+    border: none;
+}
+.submit:hover{
+    background-color: #4088f3;
+}
+.ab{
+    font-size: 13px;
+}
+.input{
+    padding: 0 40%;
+}
