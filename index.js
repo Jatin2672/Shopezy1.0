@@ -9,6 +9,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'script/welcome_screen.js')
     }
@@ -16,7 +17,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('windows_html/welcome_screen.html')
-
+ mainWindow.maximize()
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
