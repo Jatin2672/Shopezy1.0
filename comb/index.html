@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>home</title>
+</head>
+<body>
+
+    <img src="media/bg_pic.png" alt="" class="bg">
+    <div class="container" style="display: flex;" id="login_card">
+        <div class="welcome img">
+            <img src="media/welcome.png" alt="">
+        </div>
+        <div class="welcome" >
+            <h2>Welcome Back!</h2>
+            <p>We're so excited to see you again!</p>
+            <div class="welcome user">
+                <form action="">
+                    <h6 class="ab">EMAIL</h6>
+                    <input type="text" class="submit" name="Email" id="user" placeholder="someone@gmail.com" required>
+                    <br>
+                    <input type="submit" class="btn" value="Login">
+                    <p class="need">Need an account?<span id="register"><a href=""> Register.</a></span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-2" style="display: none;" id="New_acc">
+        <div class="partion first">
+            <form action="">
+                <h1>Create an account</h1>
+                <img src="img/Group 134.png" class="input" alt="">
+                <p>Email</p>
+                <input type="email" name="email" id="input">
+                <p>Shop or Bussiness Name</p>
+                <input type="text" name="bussiness" id="input">
+                <p>Mobile Number</p>
+                <input type="number" name="mobile" id="input">
+            </form>
+            </div>
+            <div class="partion second">
+                <form action="">
+                <p>Shop or Bussiness owner’s Name</p>
+                <input type="text" name="Owner" id="input">
+                <p>Bussiness Category</p>
+                <select name="type" id="input">
+                    <option value="">-- Select --</option>
+                </select>
+                <p>Address</p>
+                <textarea name="Address" id="Address"></textarea><br>
+                <input type="submit" value="Continue" class="submit"><br>
+                <a href="#" class="link ab" id="already">Already have an account? </a>
+                <p class="ab">By registering you agree to Shopezy’s <a href="#" class="link" id="term">Terms of Service</a> and <a href="#" class="link" id="privacy">Privacy Policy</a>.</p>
+            </form>
+            </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
