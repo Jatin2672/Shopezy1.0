@@ -1,5 +1,5 @@
 const login_card = document.getElementById("login_card")
-const new_acc = document.getElementsByClassName("container-2")
+const new_acc = document.getElementById("New_acc")
 const reg_btn = document.getElementById("register")
 const already = document.getElementById("already")
 
