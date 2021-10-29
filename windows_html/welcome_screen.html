@@ -7,9 +7,19 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="../style/welcome_screen.css">
     <title>Hello World!</title>
   </head>
   <body>
-        Hello world!
+        <div class="tab">
+          <select name="language" id="lang">
+            <option value="Eng">Eng</option>
+            <option value="Hindi">Hindi</option>
+          </select>
+          <img src="../Media/minimize.svg" alt="" class="tab_itm">
+          <img src="../Media/maximize.svg" alt="" class="tab_itm">
+          <img src="../Media/close.svg" alt="" class="tab_itm">
+
+        </div>
   </body>
 </html>

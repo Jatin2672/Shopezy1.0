@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../Media/bg-img.png");
+    background-size: cover;
+}
+
+.tab{
+    background: black;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    justify-content: end;
+}
+.tab_itm{
+    padding: 0 ;
+}
