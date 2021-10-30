@@ -13,6 +13,7 @@
   </head>
   <body>
         <div class="tab">
+          <div class="lang_icon"><img src="../Media/Frame.svg" alt=""></div>
           <select name="language" id="lang">
             <option value="Eng">Eng</option>
             <option value="Hindi">Hindi</option>
@@ -22,27 +23,30 @@
           <img id="close_btn" src="../Media/close.svg" alt="" class="tab_itm">
 
         </div>
-        <div class="container" style="display: flex;">
-          <div class="welcome">
-            <div>
-              <img src="../Media/wel-aunty.png" alt="">
+        <div id="content">
+          <div class="container" style="display: flex;">
+            <div class="welcome wel_bar">
+              <div class="wel_text">
+                <h1>Welcome</h1>
+                <h1>Back!</h1>
+                <p class="excited">We're so excited to see you again!</p>
+              </div>
+              <div class="wel_aunty">
+                <img src="../Media/wel-aunty.png" alt="">
+              </div>
             </div>
-              <div>
-              <h2>Welcome!</h2>
-              <p>We're so excited to see you!</p>
-
-              </div>
-              <div class="welcome user">
-                      <h6 class="ab">EMAIL</h6>
-                      <input type="text" class="submit" name="Email" id="user" placeholder="someone@gmail.com">
-                      <br>
-                      <input type="submit" class="btn" value="Login">
-                      <p class="need">Need an account?<span><a href=""> Register.</a></span></p>
-              </div>
+                <div class="welcome user">
+                        <h6 class="ab">EMAIL</h6>
+                        <input type="text" class="submit" name="Email" id="user" placeholder="someone@gmail.com">
+                        <br>
+                        <input type="submit" class="btn" value="Login">
+                        <p class="need">Need an account?<span><a href=""> Register.</a></span></p>
+                </div>
+            
           </div>
-      </div>
-        <div class="register" style="display: none;">
-         
+          <div id="register" style="display: none; color: white;">
+            ab
+          </div>
         </div>
   </body>
 </html>
