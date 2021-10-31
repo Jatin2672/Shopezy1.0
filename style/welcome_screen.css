@@ -175,7 +175,7 @@ body{
     color:  #01C7F2;
 
 }
-#input{
+.input{
     background: #303339;
     border: 1px solid #222428;
     box-sizing: border-box;
