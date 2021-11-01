@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const minimize_btn = document.getElementById('minimize_btn')
     const close_btn = document.getElementById('close_btn')
     const maximize_btn = document.getElementById('maximize_btn')
-    
+    const login_btn = document.getElementById('login_btn')
     //add event listener to buttons
     minimize_btn.addEventListener('click', () => {
         ipcRenderer.send('welcome:minimize')
@@ -18,5 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
     maximize_btn.addEventListener('click', () => {
         ipcRenderer.send('welcome:maximize')
     })
-    
+    login_btn.addEventListener('click',() => {
+        ipcRenderer.send('go_to_dashboard')
+   }) 
 })

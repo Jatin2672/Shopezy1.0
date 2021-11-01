@@ -5,7 +5,7 @@ const { ipcMain, app, BrowserWindow } = require('electron')
 const path = require('path')
 // import ipc main from electron
 
-let welcomeWindow;
+let welcomeWindow, dashboardWindow;
 function createWelcomeWindow () {
   // Create the browser window.
   welcomeWindow = new BrowserWindow({
@@ -25,7 +25,24 @@ function createWelcomeWindow () {
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
+function createdashboardWindow() {
+  dashboardWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    frame: false,
+    webPreferences: {
+      nodeIntegration: true,
+      enableRemoteModule: true,
+      // preload: path.join(__dirname, 'script/welcome_screen.js')
+    }
+  })
 
+  // and load the welcome_screen.html of the app.
+  dashboardWindow.loadFile('dashboard/index.html')
+  dashboardWindow.maximize()
+  // Open the DevTools.
+  // mainWindow.webContents.openDevTools()
+}
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
@@ -64,4 +81,8 @@ ipcMain.on('welcome:maximize', (event, arg) => {
   } else {
   welcomeWindow.maximize()
   }
+})
+ipcMain.on('go_to_dashboard', (event,arg) => {
+  createdashboardWindow()
+  welcomeWindow.close()
 })
