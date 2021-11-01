@@ -1,0 +1,13 @@
+#connectioncontainer{
+    background-color: #2E2E2E;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 400px);
+
+}
+#label{
+    color: white;
+    marginleft: 15px;
+}
