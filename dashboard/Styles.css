@@ -4,7 +4,8 @@
 }
 #contents{
     display: flex;
-    
+    flex-direction: row;
+    justify-content: space-between;
 }
 :root{
     --primary: #4087F3;
@@ -106,7 +107,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 65%;
+    width: 60%;
     /* background-color: rgb(180, 178, 178); */
     margin: 0 auto;
     padding: 10px 10px;
@@ -228,4 +229,92 @@
 #side_tray{
     display: flex;
     flex-direction: column;
+    height: 90vh;
+    width: 15%;
+    margin-right: 10px;
+    margin-top: 2%;
+    justify-content: space-evenly;
+}
+#android_connect{
+    background-color: #eeeeee;
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+.and_cont{
+    color: #FF4D6D;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#Connect_btn{
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 25px;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#time_int{
+    width: 230px;
+    padding: 15px 20px;
+    background-color: #eeeeee;
+    border: 0;
+    border-radius: 8px;
+    font-weight: bold;
+}
+#total_sell{
+    padding: 15px 0;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-evenly;
+}
+.tot_sell_one{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.percent_circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: inset 8px -4px 4px rgba(0, 0, 0, 0.25);
+}
+#profit_panel{
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+}
+#show_profit{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0;
+}
+#Customers{
+    display: flex;
+    background-color: #eeeeee;
+    justify-content: space-evenly;
+    padding: 15px 0;
+}
+#No_of_custms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.arrow_open{
+    width: 2%;
+
+    padding: 5px;
 }
