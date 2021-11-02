@@ -1,0 +1,51 @@
+.htc{
+    height: 85vh;
+    width: 872px;
+    left: 301px;
+    top: 107px;
+    border-radius: 8px;
+    border: 1px solid red;
+    display: flex; 
+    justify-content: space-evenly;
+    background-color: #393E3A;
+    color: white;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 4%;
+
+}
+.part1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.part2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.link{
+    color: #01C7F2;
+    margin-bottom: 35px;
+
+}
+.heading{
+    height: 5px;
+}
+#sign{
+    /* margin-bottom: 100px; */
+    color: white;
+    height: 24px;
+    width: 24px;
+}
+.part2 p{
+    font-size: 18px;
+    padding: 5px;
+    margin: 0 0 5px 15px;
+}
+/* #close{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 20px;
+} */
