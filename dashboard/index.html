@@ -12,7 +12,9 @@
 </head>
 
 <body>
+  <!-- total content of dashboard -->
   <div id="contents">
+    <!-- side bar -->
   <div id="tray" style="display: none;">
     <div class="item" id="options" onclick="show()"><a href=""><img src="icons/options.svg" alt=""></a></div>
     <div class="item"><a href=""><img src="icons/home.svg" alt=""></a></div>
@@ -22,9 +24,9 @@
     <div class="item"><a href=""><img src="icons/transactions.svg" alt=""></a></div>
     <div class="item"><a href=""><img src="icons/setting-1.svg" alt=""></a></div>
     <div class="item group"><a href=""><img src="icons/Group 134.png" alt=""></a></div>
-
-
   </div>
+
+   <!-- Expanded side bar -->
   <div id="tray_exp" style="display: flex;">
     <div class="shopezy_tile">
       <div class="shop_text">ShopEzy</div>
@@ -46,6 +48,8 @@
     </div>
 
   </div>
+
+  <!-- Dasbar -->
   <div id="dashbar" style="display: flex;">
     <!-- Top Part -->
     <div id="top_part">
@@ -72,14 +76,20 @@
       </div>
 
     </div>
-    <div>
-      <div>New Invoice</div>
-      <div>Add products to stock</div>
-      <div>Search product <span><img src="icons/Search.svg" alt=""></span></div>
-      <div>View Analytics</div>
+
+    <!-- Task panel -->
+    
+    <div id="task_panel">
+      <div class="panel_itm" id="new_invo">New Invoice</div>
+      <div class="panel_itm" id="add_prod">Add products to stock</div>
+      <div class="panel_itm" id="search_prod">Search product <span><img src="icons/Search.svg" alt=""></span></div>
+      <div class="panel_itm" id="view_analy">View Analytics</div>
     </div>
-    <div>
-      <div>
+
+    <!-- invoice history and out of stock -->
+
+    <div id="bottom_part">
+      <div class="tables">
         <H2>Last mini Invoice History</H2>
         <table>
           <thead>
@@ -97,17 +107,27 @@
               <td>90823742</td>
               <td>$80</td>
             </tr>
-          </tbody>
-          <tfoot>
+            <tr>
+              <td>90823742</td>
+              <td>$80</td>
+            </tr>
+            <tr>
+              <td>90823742</td>
+              <td>$80</td>
+            </tr>
+            <tr>
+              <td>90823742</td>
+              <td>$80</td>
+            </tr>
             <tr>
               <td>082374987</td>
               <td>$180</td>
             </tr>
-          </tfoot>
+          </tbody>
         </table>
       </div>
-
-      <div>
+      <!-- End part (table area) -->
+      <div class="tables">
         <H2>Product that are out of stock</H2>
         <table>
           <thead>
@@ -125,17 +145,29 @@
               <td>Toy</td>
               <td>12839477</td>
             </tr>
-          </tbody>
-          <tfoot>
+            <tr>
+              <td>Toy</td>
+              <td>12839477</td>
+            </tr>
+            <tr>
+              <td>Toy</td>
+              <td>12839477</td>
+            </tr>
+            <tr>
+              <td>Toy</td>
+              <td>12839477</td>
+            </tr>
             <tr>
               <td>yeuryi</td>
               <td>087492376</td>
             </tr>
-          </tfoot>
+          </tbody>
         </table>
       </div>
     </div>
-    <div id="side_tray" style="display: flex;">
+
+    <!-- Side tray -->
+    <div id="side_tray" style="display: none;">
       <div>
         <p>No Android Client Connected</p><input type="button" value="Connect android client"><img
           src="icons/Phone_laptop.svg" alt="">
@@ -164,15 +196,15 @@
           <main style = "padding: 20px;"></main>
           </div>
         </div>
-      </div>
-      <div>
-        <div><h3>Customers</h3>
-        <p>prev stats 2000</p>
-        <h2>2246</h2></div>
-        <div><img src="icons/Arrow.svg" alt=""><h2>10%</h2></div>
+        <div>
+          <div><h3>Customers</h3>
+            <p>prev stats 2000</p>
+            <h2>2246</h2></div>
+            <div><img src="icons/Arrow.svg" alt=""><h2>10%</h2></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 </div>
   <script src="dashboard.js"></script>
 </body>

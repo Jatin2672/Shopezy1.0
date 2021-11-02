@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+#contents{
+    display: flex;
+    
+}
 :root{
     --primary: #4087F3;
     --link: #01C7F2;
@@ -102,14 +106,10 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 70%;
-    background-color: rgb(180, 178, 178);
+    width: 65%;
+    /* background-color: rgb(180, 178, 178); */
     margin: 0 auto;
     padding: 10px 10px;
-}
-#contents{
-    display: flex;
-
 }
 #top_part{
     display: flex;
@@ -161,4 +161,71 @@
 }
 .icons img{
     margin-right: 30px;
+}
+#task_panel{
+    display: flex;
+    justify-content: space-evenly;
+    height: 55px;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: rgb(243, 230, 230);
+    border-radius: 5px;
+}
+.panel_itm{
+    background: black;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+#search_prod span{
+    padding: 5px 5px;
+    margin-top: 10px;
+}
+#bottom_part{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 30vh;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#bottom_part h2{
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.tables{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+}
+.tables tr{
+    padding: auto;
+    height: 28px;
+    color: #6b6b6b;
+}
+.tables thead{
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #eeeeee;
+
+}
+.tables th{
+    color: black;
+}
+.tables tr:nth-child(even){
+    background-color: #eeeeee;
+}
+#side_tray{
+    display: flex;
+    flex-direction: column;
 }
