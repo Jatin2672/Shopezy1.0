@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Styles.css">
+  <script src="p5.js"></script>
+  <script src="sketch.js"></script>
   <title>Dashboard</title>
 </head>
 
@@ -133,7 +135,7 @@
         </table>
       </div>
     </div>
-    <div id="side_tray" style="display: none;">
+    <div id="side_tray" style="display: flex;">
       <div>
         <p>No Android Client Connected</p><input type="button" value="Connect android client"><img
           src="icons/Phone_laptop.svg" alt="">
@@ -158,7 +160,10 @@
           </div>
           <div>3%</div>
         </div>
-        <div><img src="icons/Graph.svg" alt=""></div>
+        <div>
+          <main style = "padding: 20px;"></main>
+          </div>
+        </div>
       </div>
       <div>
         <div><h3>Customers</h3>
