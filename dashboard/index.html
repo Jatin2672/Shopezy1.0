@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Styles.css">
-  <title>Sidebar</title>
+  <script src="p5.js"></script>
+  <script src="sketch.js"></script>
+  <title>Dashboard</title>
 </head>
 
 <body>
+  <div id="contents">
   <div id="tray" style="display: none;">
     <div class="item" id="options" onclick="show()"><a href=""><img src="icons/options.svg" alt=""></a></div>
     <div class="item"><a href=""><img src="icons/home.svg" alt=""></a></div>
@@ -22,7 +25,7 @@
 
 
   </div>
-  <div id="tray_exp" style="display: none;">
+  <div id="tray_exp" style="display: flex;">
     <div class="shopezy_tile">
       <div class="shop_text">ShopEzy</div>
       <div><img src="icons/close.svg" id="close_btn" alt="" onclick="hide()"></div>
@@ -44,19 +47,27 @@
 
   </div>
   <div id="dashbar" style="display: flex;">
-    <div>
-      <h1 class="Shopezy_title_">Welcome to ShopEzy</h1>
-      <div class="user_img"><img src="icons/Group 134.png" alt=""></div>
+    <!-- Top Part -->
+    <div id="top_part">
       <div><img src="icons/Trolly.svg" alt=""></div>
-      <div>
-        <p>Lesile Fashion</p>
-        <p>miakhalifa@gmail.com</p>
-        <p>+1(629)7636228</p>
-        <p>Address</p>
-        <div class="icons">
+      <div id="Shopezy_title_">
+        <div class="user_img"><img src="icons/Face.png" alt=""></div>
+        <div id="user_info">
+          <h1 class="ShopEzy_heading">Welcome to ShopEzy </h1>
+          <br>
+          <!-- <div> -->
+            <h2>Lesile Fashion <span><img src="icons/tick.svg" alt=""></span></h2>
+            <p>miakhalifa@gmail.com</p>
+            <p>+1(629)7636228</p>
+            <br>
+            <p>Address line 1</p>
+            <p>Address line 2</p>
+            <!-- </div> -->
+          <div class="icons">
           <img src="icons/Back.svg" alt="">
           <img src="icons/Pencil.svg" alt="">
           <img src="icons/notification 1.svg" alt="">
+          </div>
         </div>
       </div>
 
@@ -124,7 +135,7 @@
         </table>
       </div>
     </div>
-    <div>
+    <div id="side_tray" style="display: flex;">
       <div>
         <p>No Android Client Connected</p><input type="button" value="Connect android client"><img
           src="icons/Phone_laptop.svg" alt="">
@@ -149,7 +160,10 @@
           </div>
           <div>3%</div>
         </div>
-        <div><img src="icons/Graph.svg" alt=""></div>
+        <div>
+          <main style = "padding: 20px;"></main>
+          </div>
+        </div>
       </div>
       <div>
         <div><h3>Customers</h3>
@@ -159,6 +173,7 @@
       </div>
     </div>
   </div>
+</div>
   <script src="dashboard.js"></script>
 </body>
 

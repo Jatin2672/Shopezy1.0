@@ -2,6 +2,15 @@
     padding: 0;
     margin: 0;
 }
+:root{
+    --primary: #4087F3;
+    --link: #01C7F2;
+    --input_black: #36393F;
+    --bg_trans: #36393f4b;
+    --submit_bg: #303339;
+    --btn_bef: #4088f3d3;
+    --lang_col: #35373d;
+}
 #tray{
     display: flex;
     background-color: #191919;
@@ -94,6 +103,62 @@
     flex-direction: column;
     height: 100vh;
     width: 70%;
-    
     background-color: rgb(180, 178, 178);
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+#contents{
+    display: flex;
+
+}
+#top_part{
+    display: flex;
+    background-color: var(--primary);
+    border: 0;
+    border-radius: 5px;
+    padding: 30px 100px;
+    justify-content: space-between;
+}
+#Shopezy_title_{
+    text-align: right;
+    display: flex;
+}
+.user_img{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightblue;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.ShopEzy_heading{
+    font-weight: lighter;
+}
+#user_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#user_info p{
+    
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+}
+#user_info h2{
+    text-transform: uppercase;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.icons img{
+    margin-right: 30px;
 }
