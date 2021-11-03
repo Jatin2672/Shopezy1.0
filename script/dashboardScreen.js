@@ -4,10 +4,10 @@ window.addEventListener("DOMContentLoaded",() => {
    expandMenuBtn = document.getElementById("expandMenuBtn")
    tray = document.getElementById("tray")
    profilepic = document.getElementById("profilepic")
-
     expandMenuBtn.addEventListener("click",() => {
         collapseExpandMenu()
     })
+    expandMenuBtn.click()
 })
 function collapseExpandMenu() {
     allSpans = document.getElementById("tray").getElementsByTagName("span")

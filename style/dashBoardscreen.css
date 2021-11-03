@@ -42,18 +42,28 @@
     filter: grayscale(100%) brightness(200%);
     cursor: pointer;
 }
+.item:hover{
+    filter: grayscale(0%) brightness(100%);
+    color: var(--primary);
+}
 .item span{
+    font-size: larger;
     margin-left: 20px;
     align-self: center;
 }
 #userprofile{
     display: flex;
     flex-direction: row;
+    background-color: var(--input_black);
+    height: 12%;
+    margin-bottom: -1px;
 }
-#userprofile img{
+#profilepic{
     width: 50px;
+    height: fit-content;
     border: 1px solid var(--primary);
-    border-radius: 60%;
+    border-radius: 50px;
+    align-self: center;
 }
 .shopezy_tile{
     display: flex;
@@ -74,19 +84,6 @@
     font-size: 12px;
     font-weight: lighter;
     color: white;
-}
-#profile{
-    height: 10%;
-    position: relative;
-    top: 50px;
-    align-self: flex-end;
-    color: white;
-    background-color: #36393F;
-    display: flex;
-    align-items: center;
-    filter: grayscale(0%);
-    padding: 20px 2px;
-    
 }
 .prof_text h3{
     font-size: 20px;
