@@ -33,12 +33,12 @@ function createdashboardWindow() {
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
-      // preload: path.join(__dirname, 'script/welcome_screen.js')
+      preload: path.join(__dirname, 'script/dashboardScreen.js')
     }
   })
 
   // and load the welcome_screen.html of the app.
-  dashboardWindow.loadFile('dashboard/index.html')
+  dashboardWindow.loadFile('windows_html/dashboardScreen.html')
   dashboardWindow.maximize()
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
