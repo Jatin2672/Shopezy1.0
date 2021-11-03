@@ -1,6 +1,7 @@
-let  data , selectedValue = "2 Nov"
+let  data , selectedValue = "2 Nov" ,profitValueLabel
 window.addEventListener("DOMContentLoaded", ()=> {
     
+    profitValueLabel = document.getElementById("profitValue")
     data = { 
         "2 Nov": [2848 , 7654],"3 Nov": [2756 , 8435],"4 Nov": [1912 , 7564],"5 Nov": [1564 , 7986],"6 Nov": [1856 , 8112],
         "7 Nov": [2000 , 8756],"8 Nov": [2341 , 7848]
@@ -19,6 +20,7 @@ function draw(){
     fill(0)
     stroke(0)
     calcScales()
+    profitValueLabel.innerHTML = "₹" + data[selectedValue][0]
     //make line dashed dashed
     setLineDash([1, 2]);
     strokeWeight(1)
