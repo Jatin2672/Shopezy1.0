@@ -12,6 +12,15 @@
 </head>
 
 <body>
+
+  <!-- taskbar -->
+  <div class="tab">
+    <img id="minimize_btn" src="../Media/minimize.svg" alt="" class="tab_itm"
+    />
+    <img id="maximize_btn" src="../Media/maximize.svg" class="tab_itm"/>
+    <img id="close_btn" src="../Media/close.svg" alt="" class="tab_itm" />
+  </div>
+
   <!-- total content of dashboard -->
   <div id="contents">
     <!-- side bar -->
@@ -39,19 +48,17 @@
         <div id="top_part">
           <div><img src="../Media/dashboardIcons/Trolly.svg" alt=""></div>
           <div id="Shopezy_title_">
-            <div class="user_img"><img src="../Media/dashboardIcons/Face.png" alt=""></div>
+            <img class="user_img" src="../Media/dashboardIcons/Face.png" alt="">
             <div id="user_info">
               <h1 class="ShopEzy_heading">Welcome to ShopEzy </h1>
               <br>
               <!-- <div> -->
-              <h2>Lesile Fashion <span><img src="../Media/dashboardIcons/tick.svg" alt=""></span></h2>
-              <p>Lesilealexandder@gmail.com</p>
+              <h2>Lesile Fashion <img id="tickMark" src="../Media/dashboardIcons/tick.svg" alt=""></h2>
+              <p id="user_mail">Lesilealexandder@gmail.com</p>
               <p>+1(629)7636228</p>
-              <br>
-              <p>Address line 1</p>
-              <p>Address line 2</p>
+              <p id="user_address">2972 Westheimer Rd. Santa Ana Ranchview , Illinois 85486 </p>
               <!-- </div> -->
-              <div class="../Media/dashboardIcons">
+              <div class="icons">
                 <img src="../Media/dashboardIcons/Back.svg" alt="">
                 <img src="../Media/dashboardIcons/Pencil.svg" alt="">
                 <img src="../Media/dashboardIcons/notification 1.svg" alt="">
@@ -66,8 +73,8 @@
         <div id="task_panel">
           <div class="panel_itm" id="new_invo">New Invoice</div>
           <div class="panel_itm" id="add_prod">Add products to stock</div>
-          <div class="panel_itm" id="search_prod">Search product <span><img src="../Media/dashboardIcons/Search.svg"
-                alt=""></span></div>
+          <div class="panel_itm" id="search_prod">Search product <img src="../Media/dashboardIcons/Search.svg"
+                alt=""/></div>
           <div class="panel_itm" id="view_analy">View Analytics</div>
         </div>
 
@@ -156,8 +163,7 @@
       <div id="side_tray" style="display: flex;">
         <div id="android_connect">
           <span class="and_cont"><img src="../Media/dashboardIcons/Phone_laptop.svg" alt="">No Android
-            Client<br>Connected</span>
-          <br>
+            Client Connected</span>
           <input type="button" value="Connect android client" id="Connect_btn">
         </div>
 

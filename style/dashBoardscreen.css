@@ -2,6 +2,31 @@
     padding: 0;
     margin: 0;
 }
+body{
+    overflow-y: hidden;
+}
+.tab{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: end;
+}
+.tab_itm{
+    width: 12px;
+    padding: 8px 12px 8px 8px;
+    cursor: pointer;
+    margin-left: 8px;
+    filter: invert(100%);
+}
+#minimize_btn:hover{
+    background-color: var(--bg_trans);
+}
+#maximize_btn:hover{
+    background-color: var(--bg_trans);
+}
+#close_btn:hover{
+    background-color: aqua;
+}
 #contents{
     display: flex;
     flex-direction: row;
@@ -22,8 +47,8 @@
     flex-direction: column;
     width: 15%;
     justify-content: space-evenly;
-    margin: 0px;
-    height: 100vh;
+    margin-top: -35px;
+    height: 102vh;
 }
 
 #navigations{
@@ -55,7 +80,7 @@
     display: flex;
     flex-direction: row;
     background-color: var(--input_black);
-    height: 12%;
+    height: 10%;
     margin-bottom: -1px;
 }
 #profilepic{
@@ -85,28 +110,11 @@
     font-weight: lighter;
     color: white;
 }
-.prof_text h3{
-    font-size: 20px;
-    font-weight: lighter;
-}
-.prof_text p{
-    font-size: 12px;
-    font-weight: 100;
-}
-#close_btn{
-    padding: 2px;
-    border-radius: 2px;
-    cursor: pointer;
-}
-#close_btn:hover{
-    background-color: red;
-}
 #dashbar{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 60%;
-    /* background-color: rgb(180, 178, 178); */
+    width: 65%;
     margin: 0 auto;
     padding: 10px 10px;
 }
@@ -115,75 +123,93 @@
     background-color: var(--primary);
     border: 0;
     border-radius: 5px;
-    padding: 30px 100px;
-    justify-content: space-between;
+    padding: 3% 2% ;
+    justify-content: space-around;
 }
 #Shopezy_title_{
     text-align: right;
     display: flex;
 }
 .user_img{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid lightblue;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    margin-top: 50px;
-    margin-left: 70px;
+    border: 2px solid white;
+    align-self: center;
+    justify-self: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    margin-left: 24%;
+    margin-top: -10%;
 }
 .ShopEzy_heading{
+    font-size: 28px;
     font-weight: lighter;
 }
+
 #user_info{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 #user_info p{
-    
-    font-size: 20px;
+    font-size: 16px;
     font-weight: lighter;
     color: white;
+}
+#tickMark{
+    margin-left: 18px;
 }
 #user_info h2{
     text-transform: uppercase;
 }
 .icons{
+    width: 40%;
     display: flex;
+    align-self: flex-end;
     justify-content: space-between;
-    margin-left: 150px;
     margin-top: 10px;
     padding: 10px;
     cursor: pointer;
 }
+#user_address{
+    width: 80%;
+    align-self: flex-end;
+    margin-top: 8px;
+}
+#user_mail{
+    margin-top: 10px;
+}
 .icons img{
-    margin-right: 30px;
+    /* margin-right: 30px; */
 }
 #task_panel{
     display: flex;
-    justify-content: space-evenly;
-    height: 55px;
+    justify-content: space-between;
     color: white;
     padding: 10px 0;
     margin-top: 20px;
-    background-color: rgb(243, 230, 230);
     border-radius: 5px;
 }
 .panel_itm{
-    background: black;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: var(--input_black);
     border: 0;
-    border-radius: 5px;
-    padding: 15px 40px;
-    font-size: 20px;
-    font-weight: 500;
+    border-radius: 8px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
 }
-#search_prod span{
-    padding: 5px 5px;
-    margin-top: 10px;
+.panel_itm:hover{
+    background-color: black;
+}
+#search_prod{
+    display: flex;
+   align-content: space-between;
+}
+#search_prod img{
+    margin-left: 5px;
 }
 #bottom_part{
     display: flex;
@@ -228,12 +254,14 @@
     display: flex;
     flex-direction: column;
     height: 90vh;
-    width: 15%;
+    width: 18%;
     margin-right: 10px;
     margin-top: 2%;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 #android_connect{
+    display: flex;
+    flex-direction: column;
     background-color: #eeeeee;
     padding: 15px 30px;
     border-radius: 8px;
@@ -247,15 +275,16 @@
 #Connect_btn{
     background-color: var(--primary);
     color: white;
+    margin-top: 10px;
     padding: 10px 25px;
     font-weight: bold;
     text-align: center;
     border: 0;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 #time_int{
-    width: 230px;
+    width: 100%;
     padding: 15px 20px;
     background-color: #eeeeee;
     border: 0;
@@ -280,14 +309,12 @@
     justify-content: center;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
     text-align: center;
     height: 50px;
     width: 50px;
     padding: 5px;
     border: 0;
-    border-radius: 50%;
+    border-radius: 50px;
     box-shadow: inset 8px -4px 4px rgba(0, 0, 0, 0.25);
 }
 #profit_panel{
@@ -313,6 +340,5 @@
 }
 .arrow_open{
     width: 2%;
-
     padding: 5px;
 }
