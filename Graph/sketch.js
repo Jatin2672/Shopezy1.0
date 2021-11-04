@@ -1,10 +1,10 @@
-let  data , selectedValue = "2 Nov" ,profitValueLabel
+let  data , selectedValue = "MON" ,profitValueLabel
 window.addEventListener("DOMContentLoaded", ()=> {
     
     profitValueLabel = document.getElementById("profitValue")
     data = { 
-        "2 Nov": [2848 , 7654],"3 Nov": [2756 , 8435],"4 Nov": [1912 , 7564],"5 Nov": [1564 , 7986],"6 Nov": [1856 , 8112],
-        "7 Nov": [2000 , 8756],"8 Nov": [2341 , 7848]
+        "MON": [2848 , 7654],"TUES": [2756 , 8435],"WED": [1912 , 7564],"THUR": [1564 , 7986],"FRI": [1856 , 8112],
+        "SAT": [2000 , 8756],"SUN": [2341 , 7848]
     }
 
   
@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", ()=> {
 // use p5js to draw scatter plot graph
 
 function setup(){
-    createCanvas(200 , 120)
+    createCanvas(240 , 120)
     
 }
 function draw(){
@@ -43,15 +43,14 @@ function calcScales(){
         lastLastRect = lastRectHeight
         lastRectHeight = rectHeight
         rectHeight , rect2Height = calcRectHeight(data[key][0] , data[key][1])
-        // set gradient fill
         strokeWeight(0)
         fill(64,135,243 , 200)
         
-        gradientRect(i , height , 15 , rectHeight , color(64,135,243 , 255) , color(64,135,243 , 0))
+        rect(i , height , 15 , rectHeight)
         
         fill(0, 0 , 0)
         textSize(8)
-        text(key.slice(0,1) , i+5 , height)
+        text(key , i , height)
         noFill()
         strokeWeight(1)
         stroke("#0175ff")
@@ -68,8 +67,6 @@ function calcScales(){
         if(mouseX < i-15 && mouseX > i-30){
             selectedValue = key
             fill(0 , 0 , 200, random(100,255))
-            strokeWeight(0)
-            ellipse(i-22 , height+rectHeight , random(4,5) , random(4,5))
         }
     })
 }
@@ -89,15 +86,4 @@ function calcRectHeight(value , value2){
 }
 function setLineDash(list) {
     drawingContext.setLineDash(list);
-}
-function gradientRect(x , y , w , h , c1 , c2){
-    for(let i = 10 ; i >= 0 ; i--){
-        fill(lerpColor(c1 , c2 , (10-i) / 10))
-        if(i == 10){
-            rect(x , y+(i*h/10) , 15 , -h/10 , 60 , 60 , 0 , 0)
-        }else{
-            rect(x , y+(i*h/10) , 15 , -h/10)
-        }
-        
-    }
 }
