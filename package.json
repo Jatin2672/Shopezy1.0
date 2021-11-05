@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^15.1.2"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.2"
   }
 }
