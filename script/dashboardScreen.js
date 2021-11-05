@@ -2,7 +2,9 @@ let expandMenuBtn,
     tray,
     profilepic,
     menuExpanded = true,
-    close_btn, minimize_btn, maximize_btn;
+    close_btn, minimize_btn, maximize_btn
+    ,AndroidConnect, DBcontent, QRscreen,
+    CloseHTC ;
 const { ipcRenderer } = require("electron");
 window.addEventListener("DOMContentLoaded", () => {
     expandMenuBtn = document.getElementById("expandMenuBtn");
@@ -11,6 +13,11 @@ window.addEventListener("DOMContentLoaded", () => {
     minimize_btn=document.getElementById("minimize_btn");
     maximize_btn=document.getElementById("maximize_btn");
     profilepic = document.getElementById("profilepic");
+    
+    AndroidConnect = document.getElementById("Connect_btn");
+    DBcontent = document.getElementById("contents");
+    QRscreen = document.getElementById("blur_bg");
+    CloseHTC = document.getElementById("close_btn_htc");
 
     minimize_btn.addEventListener("click", () => {
         ipcRenderer.send("dashboard:minimize");
@@ -25,6 +32,17 @@ window.addEventListener("DOMContentLoaded", () => {
         collapseExpandMenu();
     });
     expandMenuBtn.click();
+//  android connect
+    AndroidConnect.addEventListener('click',() =>{
+        // DBcontent.style.display="none";
+        QRscreen.style.display="flex";
+    })
+    
+    CloseHTC.addEventListener('click',() =>{
+        // DBcontent.style.display="flex";
+        QRscreen.style.display="none";
+    })
+
 });
 function collapseExpandMenu() {
     allSpans = document.getElementById("tray").getElementsByTagName("span");
@@ -56,17 +74,5 @@ function collapseExpandMenu() {
     }
     menuExpanded = !menuExpanded;
 }
-const AndroidConnect = document.getElementById("Connect_btn");
-const DBcontent = document.getElementById("contents");
-const QRscreen = document.getElementById("blur_bg");
-const CloseHTC = document.getElementById("close_btn_htc");
 
-AndroidConnect.addEventListener('click',() =>{
-    DBcontent.style.display="none";
-    QRscreen.style.display="flex";
-})
 
-CloseHTC.addEventListener('click',() =>{
-    DBcontent.style.display="flex";
-    QRscreen.style.display="none";
-})

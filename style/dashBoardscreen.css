@@ -350,14 +350,20 @@ body{
     width: 2%;
     padding: 5px;
 }
-/* --------------------------------HTC---------------------------------------------------- */
+/* --------------------------------     HTC       ---------------------------------------------------- */
 
 #blur_bg{
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.568);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
 }
 .htc{
     height: 70vh;
