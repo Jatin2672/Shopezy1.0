@@ -15,9 +15,9 @@
         <div>
             <span class="menu_item" id="account_background style=display=none" >Account</span>
             <span class="menu_item"  id="invoice_background style=display=none">Invoice</span>
-            <span class="menu_item" id="personalisation_background">Personalisation</span>
-            <span class="menu_item">Analytics</span>
-            <span class="menu_item">Stocks</span>
+            <span class="menu_item" id="personalisation_background style=display=none">Personalisation</span>
+            <span class="menu_item" >Analytics</span>
+            <span class="menu_item" id="stocks_background">Stocks</span>
             <span class="menu_item">Integration</span>
         </div>
     </div>
@@ -121,7 +121,7 @@
             </div>
         </div>
         <!-- ...............................personalisation screen design.......................... -->
-        <div id="personalisation_menu">
+        <div id="personalisation_menu" style="display: none;">
             <h1 class="text_personalisation">Personalisation</h1>
             <div class="language">
                 <span>Language</span>
@@ -152,6 +152,33 @@
             <div>
                 <button id="savebtnPersonalisation">Save changes</button>
             </div>
+       </div>
+       <!-- ......................stocks screen design........................ -->
+       <div id="stocks_menu">
+           <h1 class="stocks_initial">Stocks</h1>
+           <div class="text_fetchEnable">
+               <span>Fetch Product Details From Server</span>
+               <img class="enable_disable" src="../Media/enablebtn.svg" alt="">
+           </div>
+           <div class="text_fetchEnable">
+            <span>Remind  for product  unavailability</span>
+            <img class="enable_disable" src="../Media/disablebtn.svg" alt="">
+           </div>
+           <div id="quantity_text">Quantity</div>
+           <div id="quantity_option">
+            <span class="acc_1" id="credit">Units</span>
+            <span class="acc_1" id="debit">Kilograms</span>
+            <span class="acc_1" id="Upi">Meters</span>
+            <span class="acc_1" id="cash">Litres</span>
+            <img id="addoption_quantity" src="../Media/addOption.svg" alt="">
+           </div>
+           <div>
+               <img id="realstocksadd" src="../Media/realstocksadd.svg" alt="">
+           </div>
+           <div>
+            <button id="savebtnStocks">Save changes</button>
+        </div>
+           
        </div>
 
 
