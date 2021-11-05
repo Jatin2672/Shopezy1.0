@@ -14,7 +14,8 @@
         <H1>Settings</H1>
         <div>
             <span class="menu_item" id="account_background style=display=none" >Account</span>
-            <span class="menu_item"  id="invoice_background">Invoice</span>
+            <span class="menu_item"  id="invoice_background style=display=none">Invoice</span>
+            <span class="menu_item" id="personalisation_background">Personalisation</span>
             <span class="menu_item">Analytics</span>
             <span class="menu_item">Stocks</span>
             <span class="menu_item">Integration</span>
@@ -77,7 +78,7 @@
         </div>
         </div>
         <!--................................. invoice screen design........................... -->
-        <div id="invoice_menu">
+        <div id="invoice_menu" style="display: none;">
             <h1 class="text_invoice">Invoice</h1>
             <p class="text_invoice">Template</p>
             <div id="template_option">
@@ -119,6 +120,41 @@
                 <button id="savebtninvoice">Save changes</button>
             </div>
         </div>
+        <!-- ...............................personalisation screen design.......................... -->
+        <div id="personalisation_menu">
+            <h1 class="text_personalisation">Personalisation</h1>
+            <div class="language">
+                <span>Language</span>
+                <select  name="" id="selectmenu">
+                    <option value="0">Select</option>
+                    <option value="1">Hindi</option>
+                    <option value="2">English</option>
+                </select>
+
+            </div>
+            <div class="language">
+                <span>Currency</span>
+                <select name="" id="selectmenu2">
+                    <option value="0">Select</option>
+                    <option value="1">Dollar</option>
+                    <option value="2">Pound</option>
+                    <option value="3">Rupee</option>
+                </select>
+            </div>
+            <div class="text_fetchEnable">
+                <span>Fetch Product Details From Server</span>
+                <img class="enable_disable" src="../Media/enablebtn.svg" alt="">
+            </div>
+            <div class="text_fetchEnable">
+                <span>Remind  for product  unavailability</span>
+                <img class="enable_disable" src="../Media/disablebtn.svg" alt="">
+            </div>
+            <div>
+                <button id="savebtnPersonalisation">Save changes</button>
+            </div>
+       </div>
+
+
 
 
 

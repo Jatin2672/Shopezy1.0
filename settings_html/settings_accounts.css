@@ -274,5 +274,53 @@ body{
     margin-bottom: 20px;
 
 }
+/* ....................personalisaton screen design....................... */
+#personalisation_background{
+    width: 50%;
+    
+    background: #4087F3;
 
+    border-radius: 16px;
+    display: flex;
+}
+.text_personalisation{
+    margin-left: 40px;
+}
+.language{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#selectmenu{
+    margin-left: 250px;
+    width: 300px;
+    height: 45px;
+}
+#selectmenu2{
+    margin-left: 253px;
+    width: 300px;
+    height: 45px;
+}
+.enable_disable{
+    margin-left: 150px;
+   
+}
+.text_fetchEnable{
+    display: flexbox;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#savebtnPersonalisation{
+    background-color: #4087F3;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 8px;
+    height: fit-content;
+    color: white;
+    padding: 18px;
+    border: none;
+    margin-left: calc(100% - 150px);
+    margin-top: 100px;
+    width: 270px;
+    
+
+}
 
