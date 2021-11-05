@@ -178,9 +178,7 @@ body{
 #user_mail{
     margin-top: 10px;
 }
-.icons img{
-    /* margin-right: 30px; */
-}
+
 #task_panel{
     display: flex;
     justify-content: space-between;
@@ -265,6 +263,8 @@ body{
     background-color: #eeeeee;
     padding: 15px 30px;
     border-radius: 8px;
+    height: 15%;
+    justify-content: space-evenly;
 }
 .and_cont{
     color: #FF4D6D;
@@ -291,12 +291,13 @@ body{
     border-radius: 8px;
     font-weight: bold;
 }
-/* side */
+
 #total_sell{
     padding: 15px 0;
     background-color: #eeeeee;
     display: flex;
     justify-content: space-evenly;
+    height: 15%;
 }
 .tot_sell_one{
     display: flex;
@@ -337,6 +338,7 @@ body{
     background-color: #eeeeee;
     justify-content: space-evenly;
     padding: 15px 0;
+    height: 13%;
 }
 #No_of_custms{
     display: flex;
@@ -347,4 +349,80 @@ body{
 .arrow_open{
     width: 2%;
     padding: 5px;
+}
+/* --------------------------------HTC---------------------------------------------------- */
+
+#blur_bg{
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.htc{
+    height: 70vh;
+    width: 50%;
+    border-radius: 8px;
+    padding: 1%;
+    display: flex; 
+    justify-content: space-evenly;
+    background-color: #393E3A;
+    color: white;
+    text-align: center;
+}
+.part1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.part2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10%;
+}
+.link_htc{
+    color: #01C7F2;
+    margin-bottom: 35px;
+
+}
+
+#sign{
+    font-size: 18px;
+    color: white;
+    height: 20px;
+    width: 20px;
+    top: 5px;
+    position: relative;
+}
+.sign_txt{
+    display: flex;
+    justify-content: center;
+}
+.sign_txt p{
+    font-size: 24px;
+
+}
+.part2 p{
+    font-size: 18px;
+    padding: 5px;
+    margin: 0 0 5px 15px;
+}
+#close_htc{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 2%;
+    margin-left: 5%;
+    padding-top: 3%;
+
+}
+.part1 h1{
+    text-align: left;
+}
+#close_btn_htc{
+    cursor: pointer;
+}
+#close_btn_htc:hover{
+    background-color: red;
 }

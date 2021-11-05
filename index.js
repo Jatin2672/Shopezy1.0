@@ -86,3 +86,16 @@ ipcMain.on('go_to_dashboard', (event,arg) => {
   createdashboardWindow()
   welcomeWindow.close()
 })
+ipcMain.on('dashboard:close',()=> {
+  dashboardWindow.close()
+})
+ipcMain.on('dashboard:minimize',()=> {
+  dashboardWindow.minimize()
+})
+ipcMain.on('dashboard:maximize',()=> {
+  if(dashboardWindow.isMaximized()) {
+    dashboardWindow.unmaximize()
+  } else {
+  dashboardWindow.maximize()
+  }
+})

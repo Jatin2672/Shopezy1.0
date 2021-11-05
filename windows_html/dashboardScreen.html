@@ -14,7 +14,7 @@
 <body>
 
   <!-- taskbar -->
-  <div class="tab">
+  <div class="tab" style="display: flex;">
     <img id="minimize_btn" src="../Media/minimize.svg" alt="" class="tab_itm"
     />
     <img id="maximize_btn" src="../Media/maximize.svg" class="tab_itm"/>
@@ -22,7 +22,7 @@
   </div>
 
   <!-- total content of dashboard -->
-  <div id="contents">
+  <div id="contents" style="display: flex;">
     <!-- side bar -->
     <div id="tray" style="display: flex;">
       <div id="navigations">
@@ -217,11 +217,36 @@
             <img src="../Media/dashboardIcons/Arrow.svg" alt="">
           </div>
         </div>
-        <!-- side_tray ends -->
-      </div>
-      <!-- Content ends here -->
-    </div>
-  </div>
+        
+      </div><!-- side_tray ends -->
+      
+    </div><!-- Content ends here -->
+
+    <!-- scan to Connect -->
+    <div id="blur_bg" style="display: none;">
+      <div class="htc">
+          <div class="part1">
+              <div>
+                  <H1 class="heading">How to Connect?</H1>
+                  <img src="../Media/Download.svg" alt="">
+                  <h2 class="heading"> Download and install</h2>
+                  <p class="heading">shopezy client app</p>
+                  <p class="link_htc">https://www.someurl.com/somesuffix</p>
+              </div>
+              <div>
+                  <img src="../Media/Phone.svg" alt="" style="margin-left: 25px;">
+                  <h2 class="heading">Click on Scan to Connect</h2>
+                  <p class="link_htc">Make sure both mobile and desktop are on<br>same network</p>
+              </div>
+          </div>
+          <div class="part2">
+              <h1>Scan To Connect</h1>
+              <img src="../Media/Qr.svg" alt="">
+              <div class="sign_txt"><input type="checkbox" name="Keep me sign in" id="sign"><p>Keep me signed in</p></div>
+          </div>
+          <div id="close_htc"><img src="../Media/close.svg" alt="" id="close_btn_htc"></div>
+      </div> <!-- htc closed -->
+  </div><!-- blur bg closed -->
 </body>
 
 </html>
