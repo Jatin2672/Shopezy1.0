@@ -362,3 +362,27 @@ body{
     width: 270px;
     
 }
+/* ..................................Integration screen design................................ */
+#integration_background{
+    width: 50%;
+    
+    background: #4087F3;
+
+    border-radius: 16px;
+    display: flex;
+}
+#integration_initial{
+    margin-left: 40px;  
+}
+#integration_img{
+    display: flex;
+    margin-left:25%;
+    margin-top: 80px;
+}
+#integration_text{
+    margin-left: 50%;
+    text-align: center;
+    margin-top: 60px;
+    color: #4087F3;;
+
+}

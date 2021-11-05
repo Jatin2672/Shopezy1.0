@@ -17,8 +17,8 @@
             <span class="menu_item"  id="invoice_background style=display=none">Invoice</span>
             <span class="menu_item" id="personalisation_background style=display=none">Personalisation</span>
             <span class="menu_item" >Analytics</span>
-            <span class="menu_item" id="stocks_background">Stocks</span>
-            <span class="menu_item">Integration</span>
+            <span class="menu_item" id="stocks_background style=display=none">Stocks</span>
+            <span class="menu_item" id="integration_background">Integration</span>
         </div>
     </div>
     <div id="settings_container">
@@ -154,7 +154,7 @@
             </div>
        </div>
        <!-- ......................stocks screen design........................ -->
-       <div id="stocks_menu">
+       <div id="stocks_menu" style="display:none;">
            <h1 class="stocks_initial">Stocks</h1>
            <div class="text_fetchEnable">
                <span>Fetch Product Details From Server</span>
@@ -177,8 +177,18 @@
            </div>
            <div>
             <button id="savebtnStocks">Save changes</button>
-        </div>
+           </div>
            
+       </div>
+       <!-- ........................Integration screen design.......................................... -->
+       <div id="integration_menu">
+           <h1 id="integration_initial">Integration</h1>
+           <div id="integration_img">
+               <img src="../Media/integration service.png" alt="">
+           </div>
+           <div id="integration_text">
+             <h2>Integration  Service is under build</h2> 
+           </div>
        </div>
 
 
