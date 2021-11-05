@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="settings_accounts.css">
+    <link rel="stylesheet" href="settings.css">
 </head>
 
 <body>
@@ -14,10 +14,11 @@
         <H1>Settings</H1>
         <div>
             <span class="menu_item" id="account_background style=display=none" >Account</span>
-            <span class="menu_item"  id="invoice_background">Invoice</span>
-            <span class="menu_item">Analytics</span>
-            <span class="menu_item">Stocks</span>
-            <span class="menu_item">Integration</span>
+            <span class="menu_item"  id="invoice_background style=display=none">Invoice</span>
+            <span class="menu_item" id="personalisation_background style=display=none">Personalisation</span>
+            <span class="menu_item" >Analytics</span>
+            <span class="menu_item" id="stocks_background style=display=none">Stocks</span>
+            <span class="menu_item" id="integration_background">Integration</span>
         </div>
     </div>
     <div id="settings_container">
@@ -77,7 +78,7 @@
         </div>
         </div>
         <!--................................. invoice screen design........................... -->
-        <div id="invoice_menu">
+        <div id="invoice_menu" style="display: none;">
             <h1 class="text_invoice">Invoice</h1>
             <p class="text_invoice">Template</p>
             <div id="template_option">
@@ -119,6 +120,78 @@
                 <button id="savebtninvoice">Save changes</button>
             </div>
         </div>
+        <!-- ...............................personalisation screen design.......................... -->
+        <div id="personalisation_menu" style="display: none;">
+            <h1 class="text_personalisation">Personalisation</h1>
+            <div class="language">
+                <span>Language</span>
+                <select  name="" id="selectmenu">
+                    <option value="0">Select</option>
+                    <option value="1">Hindi</option>
+                    <option value="2">English</option>
+                </select>
+
+            </div>
+            <div class="language">
+                <span>Currency</span>
+                <select name="" id="selectmenu2">
+                    <option value="0">Select</option>
+                    <option value="1">Dollar</option>
+                    <option value="2">Pound</option>
+                    <option value="3">Rupee</option>
+                </select>
+            </div>
+            <div class="text_fetchEnable">
+                <span>Fetch Product Details From Server</span>
+                <img class="enable_disable" src="../Media/enablebtn.svg" alt="">
+            </div>
+            <div class="text_fetchEnable">
+                <span>Remind  for product  unavailability</span>
+                <img class="enable_disable" src="../Media/disablebtn.svg" alt="">
+            </div>
+            <div>
+                <button id="savebtnPersonalisation">Save changes</button>
+            </div>
+       </div>
+       <!-- ......................stocks screen design........................ -->
+       <div id="stocks_menu" style="display:none;">
+           <h1 class="stocks_initial">Stocks</h1>
+           <div class="text_fetchEnable">
+               <span>Fetch Product Details From Server</span>
+               <img class="enable_disable" src="../Media/enablebtn.svg" alt="">
+           </div>
+           <div class="text_fetchEnable">
+            <span>Remind  for product  unavailability</span>
+            <img class="enable_disable" src="../Media/disablebtn.svg" alt="">
+           </div>
+           <div id="quantity_text">Quantity</div>
+           <div id="quantity_option">
+            <span class="acc_1" id="credit">Units</span>
+            <span class="acc_1" id="debit">Kilograms</span>
+            <span class="acc_1" id="Upi">Meters</span>
+            <span class="acc_1" id="cash">Litres</span>
+            <img id="addoption_quantity" src="../Media/addOption.svg" alt="">
+           </div>
+           <div>
+               <img id="realstocksadd" src="../Media/realstocksadd.svg" alt="">
+           </div>
+           <div>
+            <button id="savebtnStocks">Save changes</button>
+           </div>
+           
+       </div>
+       <!-- ........................Integration screen design.......................................... -->
+       <div id="integration_menu">
+           <h1 id="integration_initial">Integration</h1>
+           <div id="integration_img">
+               <img src="../Media/integration service.png" alt="">
+           </div>
+           <div id="integration_text">
+             <h2>Integration  Service is under build</h2> 
+           </div>
+       </div>
+
+
 
 
 

@@ -274,5 +274,115 @@ body{
     margin-bottom: 20px;
 
 }
+/* ....................personalisaton screen design....................... */
+#personalisation_background{
+    width: 50%;
+    
+    background: #4087F3;
 
+    border-radius: 16px;
+    display: flex;
+}
+.text_personalisation{
+    margin-left: 40px;
+}
+.language{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#selectmenu{
+    margin-left: 250px;
+    width: 300px;
+    height: 45px;
+}
+#selectmenu2{
+    margin-left: 253px;
+    width: 300px;
+    height: 45px;
+}
+.enable_disable{
+    margin-left: 150px;
+   
+}
+.text_fetchEnable{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#savebtnPersonalisation{
+    background-color: #4087F3;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 8px;
+    height: fit-content;
+    color: white;
+    padding: 18px;
+    border: none;
+    margin-left: calc(100% - 150px);
+    margin-top: 100px;
+    width: 270px;
+}
+/* ...........................stocks screen design.................................. */
+#stocks_background{
+    width: 50%;
+    
+    background: #4087F3;
 
+    border-radius: 16px;
+    display: flex;
+}
+.stocks_initial{
+    margin-left: 40px;  
+}
+#quantity_option{
+    display: flex;
+    margin-left: 30px;
+}
+#quantity_text{
+    margin-left: 30px;
+    margin-top: 50px;
+    padding: 25px;
+}
+#addoption_quantity{
+    margin-left: 30px;
+}
+#realstocksadd{
+    margin-left: 35px;
+    margin-top: 70px;
+}
+#savebtnStocks{
+    background-color: #4087F3;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 4px;
+    height: fit-content;
+    color: white;
+    padding: 18px;
+    border: none;
+    margin-left: calc(100% - 150px);
+    margin-top: 100px;
+    width: 270px;
+    
+}
+/* ..................................Integration screen design................................ */
+#integration_background{
+    width: 50%;
+    
+    background: #4087F3;
+
+    border-radius: 16px;
+    display: flex;
+}
+#integration_initial{
+    margin-left: 40px;  
+}
+#integration_img{
+    display: flex;
+    margin-left:25%;
+    margin-top: 80px;
+}
+#integration_text{
+    margin-left: 50%;
+    text-align: center;
+    margin-top: 60px;
+    color: #4087F3;;
+
+}
