@@ -1,0 +1,278 @@
+body{
+    display: flex;
+}
+#sidebar{
+    width: 10%;
+    height: 100%;
+    background-color: black;
+}
+#SettingsMenu{
+    width:20%;
+    height: 100%;
+    padding-left: 20px;
+}
+.menu_item{
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+}
+#account_background{
+    
+    border: 2px;
+    background: #4087F3;
+   
+    border-radius: 16px;
+    width: 50%;
+  
+}
+#settings_container{
+    display: flex;
+    margin-top: 50px;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding-top: 50px;
+    
+    
+}
+#acc{
+    margin-left: 35px;
+    
+}
+.acc_1{
+    display: flex;
+    background:white;
+    margin: 8px;
+    
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+#icon img{
+    border-radius: 250px;
+    border: 2px solid #4087F3;
+    height: fit-content;
+}
+#upl{
+    display: flex;
+    align-items: center;
+}
+#upl1{
+    
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 4px;
+    height: fit-content;
+    color: #4087F3;
+}
+#rem{
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 4px;
+    height: fit-content;
+    
+}
+.horizontal_line{
+    color: #EEEEEE;
+    width: 80%;
+}
+#account_menu{
+    width: 100%;
+}
+#userinfo{
+    display: flex;
+    width: 100%;
+
+}
+.user_info{
+    flex-direction: column;
+    /* background-color: #4087F3; */
+    width: 50%;
+    padding: 5%;
+}
+.label{
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+.userinput{
+    width: 100%;
+    height: 44px;
+    border: 1px solid #6B6B6B;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+#addressinput{
+    height: 125px;
+}
+#verifycontainer{
+    padding: 5%;
+    
+    
+}
+.btn{
+     
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 4px;
+    height: fit-content;
+    color: #4087F3;
+    padding: 18px;
+    border: none;
+}
+#settings_container::-webkit-scrollbar {
+    display: none;
+}
+#savebtn{
+     
+    background-color: #4087F3;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 4px;
+    height: fit-content;
+    color: white;
+    padding: 18px;
+    border: none;
+    margin-left: calc(100% - 150px);
+
+}
+/* inoice page design */
+#invoice_background{
+    width: 50%;
+    
+    background: #4087F3;
+
+    border-radius: 16px;
+    display: flex;
+}
+.text_invoice{
+    margin-left: 35px;
+}
+.temp_option{
+    margin: 15px;
+    display:flex ;
+    margin-left: 45px;
+   
+}
+#template_option{
+    display: flex;
+    
+}
+#text_statement{
+    margin-top: 30px;
+    margin-left: 35px;
+}
+#option_payment{
+    display: flex;
+    margin-top: 25px;
+    margin-left: 35px;
+}
+#credit{
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 25px;
+    height: fit-content;
+    
+}
+#debit{
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 25px;
+    height: fit-content;
+}
+#Upi{
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 25px;
+    height: fit-content;
+}
+#cash{
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 25px;
+    height: fit-content;
+}
+#paymentoption_add{
+    margin-top: 20px;
+    margin-left: 47%;
+    /* display: flex; */
+}
+#info_accountant1{
+    display:flex;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+
+
+#info_accountant2{
+    display: flex;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+#info_accountant3{
+    display:flex;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+#signature_directors1{
+    background: #EEEEEE;
+    border-radius: 12px;
+    margin-left: 194px;
+    width: 215px;
+    /* height: 56px; */
+    text-align: center;
+    padding: 15px;
+}
+#signature_directors2{
+    background: #EEEEEE;
+    border-radius: 12px;
+    margin-left: 180px;
+    width: 215px;
+    /* height: 56px; */
+    text-align: center;
+    padding: 15px;
+}
+#signature_directors3{
+    background: #EEEEEE;
+    border-radius: 12px;
+    margin-left: 180px;
+    width: 215px;
+    /* height: 56px; */
+    text-align: center;
+    padding: 15px;
+}
+.director_option{
+    margin-left: 200px;
+}
+#newaccountdirector{
+    margin-top: 45px;
+    margin-left:35%;
+    background: #4087F3;
+    border-radius: 4px;
+    width: 280px;
+    height: 30px;
+    text-align: center;
+    padding-top: 15px;
+
+}
+#savebtninvoice{
+    background-color: #4087F3;
+    box-shadow: 0px 0px 8px rgba(64, 135, 243, 0.5);
+    border-radius: 4px;
+    height: fit-content;
+    color: white;
+    padding: 18px;
+    border: none;
+    margin-left: calc(100% - 150px);
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+}
+
+

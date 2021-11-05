@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="settings_accounts.css">
 </head>
 
 <body>
@@ -13,15 +13,15 @@
     <div id="SettingsMenu">
         <H1>Settings</H1>
         <div>
-            <span class="menu_item">Account</span>
-            <span class="menu_item">Invoice</span>
+            <span class="menu_item" id="account_background style=display=none" >Account</span>
+            <span class="menu_item"  id="invoice_background">Invoice</span>
             <span class="menu_item">Analytics</span>
             <span class="menu_item">Stocks</span>
             <span class="menu_item">Integration</span>
         </div>
     </div>
     <div id="settings_container">
-        <div id="account_menu">
+        <div id="account_menu" style="display: none;">
             <h1 id="acc">Account</h1>
             <div id="upl">
                 <div class="acc_1" id="icon"><img src="../dashboard/icons/Face.png" alt=""></div>
@@ -76,7 +76,49 @@
 
         </div>
         </div>
-
+        <!--................................. invoice screen design........................... -->
+        <div id="invoice_menu">
+            <h1 class="text_invoice">Invoice</h1>
+            <p class="text_invoice">Template</p>
+            <div id="template_option">
+                <div class="temp_option"><img src="../Media/optionTemp1.png" alt=""></div>
+                <div class="temp_option"><img src="../Media/optionTemp2.png" alt=""></div>
+                <div class="temp_option"><img src="../Media/optionTemp3.png" alt=""></div>
+            </div>
+            <div id="text_statement">Payment Mode Accepted</div>
+            <div id="option_payment">
+                <span class="acc_1" id="credit">Credit Card</span>
+                <span class="acc_1" id="debit">Debit Card</span>
+                <span class="acc_1" id="Upi">Upi Payment</span>
+                <span class="acc_1" id="cash">Cash Payment</span>
+            </div>
+            <div >
+                <div id="paymentoption_add"><img src="../Media/paymentModeAddOption.png" alt=""></div>
+            </div>
+            <div>
+                <span class="acc_1">Accountant Director</span>
+                <div id="info_accountant1">
+                    <span>Jacob Jones</span>
+                    <div id="signature_directors1"><img src="../Media/Jacob Jones.png" alt=""></div>
+                    <img src="../Media/directoroption.svg" alt="" class="director_option">
+                </div>
+                <div id="info_accountant2" >
+                    <span>Annette Black</span>
+                    <div id="signature_directors2"><img src="../Media/Anettte Bl..png" alt=""></div>
+                    <img src="../Media/directoroption.svg" alt="" class="director_option">
+                </div>
+                <div id="info_accountant3">
+                    <span>Bessie Cooper</span>
+                    <div id="signature_directors3"><img src="../Media/Bessie.png" alt=""></div>
+                    <img src="../Media/directoroption.svg" alt="" class="director_option">
+                </div>
+            </div>
+            <div id="newaccountdirector">New Accountant Director
+            </div>
+            <div>
+                <button id="savebtninvoice">Save changes</button>
+            </div>
+        </div>
 
 
 
