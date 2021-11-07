@@ -9,7 +9,7 @@ body{
     --primary: #4087F3;
     --link: #01C7F2;
     --input_black: #36393F;
-    --bg_trans: #36393f4b;
+    --bg_trans: rgba(54, 57, 63, 0.8);
     --submit_bg: #303339;
     --btn_bef: #4088f3d3;
     --lang_col: #35373d;
@@ -73,6 +73,7 @@ body{
     border-radius: 8px;
     color: white;
     box-shadow: 0px 4px 4px var(--input_black);
+    backdrop-filter: blur(10px);
 }
 .welcome{
     
