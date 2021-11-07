@@ -1,11 +1,7 @@
 body{
     display: flex;
 }
-#sidebar{
-    width: 10%;
-    height: 100%;
-    background-color: black;
-}
+
 #SettingsMenu{
     width:20%;
     height: 100%;
@@ -144,7 +140,7 @@ body{
 #invoice_background{
     width: 50%;
     
-    background: #4087F3;
+    /* background: #4087F3; */
 
     border-radius: 16px;
     display: flex;
@@ -278,7 +274,7 @@ body{
 #personalisation_background{
     width: 50%;
     
-    background: #4087F3;
+    /* background: #4087F3; */
 
     border-radius: 16px;
     display: flex;
@@ -325,7 +321,7 @@ body{
 #stocks_background{
     width: 50%;
     
-    background: #4087F3;
+    /* background: #4087F3; */
 
     border-radius: 16px;
     display: flex;
@@ -366,7 +362,7 @@ body{
 #integration_background{
     width: 50%;
     
-    background: #4087F3;
+    /* background: #4087F3; */
 
     border-radius: 16px;
     display: flex;

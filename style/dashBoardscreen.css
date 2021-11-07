@@ -10,6 +10,7 @@ body{
     flex-direction: row;
     width: 100vw;
     justify-content: end;
+
 }
 .tab_itm{
     width: 12px;
@@ -431,4 +432,12 @@ body{
 }
 #close_btn_htc:hover{
     background-color: red;
+}
+.otherpages{
+    width: 85%;
+    height:calc(100vh - 20px);
+    position: fixed;
+    left: 15%;
+    top: 20px;
+
 }

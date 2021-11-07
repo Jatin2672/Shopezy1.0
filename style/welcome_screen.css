@@ -204,3 +204,7 @@ body{
 .terms{
     font-size: 17px;
 }
+#goToRegister , #backtologin{
+    cursor: pointer;
+    color: var(--primary);
+}

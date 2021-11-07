@@ -64,7 +64,7 @@ function calcScales(){
         translate(-15,0)
         i+=30
         stroke(0)
-        if(mouseX < i-15 && mouseX > i-30){
+        if(mouseX < i-15 && mouseX > i-30 && mouseY < 200 && mouseY > 0){
             selectedValue = key
             fill(0 , 0 , 200, random(100,255))
         }
