@@ -85,7 +85,14 @@ const sqlite3 = require('sqlite3').verbose()
         if(err){ console.log(err.message) }
         console.log("connected to database")
     });
-    db.run(`CREATE TABLE IF NOT EXISTS sellerinfo (barcode TEXT, name TEXT, price TEXT, quantity TEXT, image TEXT)`);
+    // db.run(`CREATE TABLE IF NOT EXISTS sellerinfo (barcode TEXT, name TEXT, price TEXT, quantity TEXT, image TEXT)`);
+    db.run(`INSERT INTO sellerinfo (barcode, name, price, quantity, image) VALUES (? ,? ,? ,? ,?)`,["DIvyanshu","JAtin","ka","best","friend"], function(err) {
+      if (err) {
+      return console.log(err.message);
+      }
+      // get the last insert id
+      console.log(`A row has been inserted with rowid ${this.lastID}`);
+      });
     db.close()
 
 
