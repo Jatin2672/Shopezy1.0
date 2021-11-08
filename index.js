@@ -80,6 +80,14 @@ const port = 8000;
 // import sqllite3
 const sqlite3 = require('sqlite3').verbose()
 
+    // open a database in sql lite 3
+    let db = new sqlite3.Database('database/sellerinfo1.db' , (err) => {
+        if(err){ console.log(err.message) }
+        console.log("connected to database")
+    });
+    db.run(`CREATE TABLE IF NOT EXISTS sellerinfo (barcode TEXT, name TEXT, price TEXT, quantity TEXT, image TEXT)`);
+    db.close()
+
 
 // import ip from os module
 const { networkInterfaces } = require("os");
