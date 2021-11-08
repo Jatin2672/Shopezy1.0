@@ -170,6 +170,8 @@ body{
 .create{
     text-align: center;
     font-weight: normal;
+    
+    
 }
 .link{
     text-decoration: none;
@@ -196,11 +198,12 @@ body{
     resize: none;
 }
 #user_img{
-    padding: 0 40%;
-    border: 1px solid gray;
-    border-radius: 3px;
+    padding: 40px 30%;
+    /* border: 1px solid gray;
+    border-radius: 3px; */
     height: 104px;
     width: 104px;
+    
 }
 .terms{
     font-size: 17px;
@@ -208,4 +211,15 @@ body{
 #goToRegister , #backtologin{
     cursor: pointer;
     color: var(--primary);
+}
+#reg_page{
+    display: flex;
+    width: 100%;
+}
+.partion_first{
+    flex-direction: column;
+    /* background-color: #4087F3; */
+    width: 50%;
+    padding: 5%;
+ 
 }

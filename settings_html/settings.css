@@ -273,9 +273,6 @@ body{
 /* ....................personalisaton screen design....................... */
 #personalisation_background{
     width: 50%;
-    
-    /* background: #4087F3; */
-
     border-radius: 16px;
     display: flex;
 }
