@@ -4,7 +4,7 @@ let expandMenuBtn,
     menuExpanded = true,
     close_btn, minimize_btn, maximize_btn
     ,AndroidConnect, DBcontent, QRscreen,
-    CloseHTC , settingsbtn ,side_tray , dashbar ,setpage;
+    CloseHTC , settingsbtn ,side_tray , dashbar ,setpage,homebtn;
 const { ipcRenderer } = require("electron");
 window.addEventListener("DOMContentLoaded", () => {
     expandMenuBtn = document.getElementById("expandMenuBtn");
@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
     dashbar = document.getElementById('dashbar')
     side_tray = document.getElementById('side_tray')
     setpage = document.getElementById('setpage')
+    homebtn=document.getElementById("goToHome");
 
     minimize_btn.addEventListener("click", () => {
         ipcRenderer.send("dashboard:minimize");
@@ -52,6 +53,14 @@ window.addEventListener("DOMContentLoaded", () => {
         setpage.style.display="flex"
     })
     
+    homebtn.addEventListener('click',()=>{
+        // Setting to dashboard
+        if (setpage.style.display="flex") {
+            setpage.style.display="none";
+            dashbar.style.display="flex";
+            side_tray.style.display="flex";
+        }
+    })
 
 });
 function collapseExpandMenu() {
