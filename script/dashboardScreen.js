@@ -5,7 +5,7 @@ let expandMenuBtn,
     close_btn, minimize_btn, maximize_btn
     ,AndroidConnect, DBcontent, QRscreen,
     CloseHTC , settingsbtn ,side_tray ,
-    dashbar ,setpage,homebtn, invoiceBTN;
+    dashbar ,setpage,homebtn, invoiceBTN, invoiceBTN2;
 const { ipcRenderer } = require("electron");
 window.addEventListener("DOMContentLoaded", () => {
     expandMenuBtn = document.getElementById("expandMenuBtn");
@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
     setpage = document.getElementById('setpage')
     homebtn=document.getElementById("goToHome");
     invoiceBTN=document.getElementById("invoiceBTN");
+    invoiceBTN2=document.getElementById("new_invo");
     invoicePage=document.getElementById("invoicePage");
 
     minimize_btn.addEventListener("click", () => {
@@ -58,6 +59,13 @@ window.addEventListener("DOMContentLoaded", () => {
     })
     
     invoiceBTN.addEventListener('click',()=>{
+        invoicePage.style.display="flex";
+        dashbar.style.display="none";
+        side_tray.style.display="none";
+        setpage.style.display = "none";
+    })
+
+    invoiceBTN2.addEventListener('click', ()=>{
         invoicePage.style.display="flex";
         dashbar.style.display="none";
         side_tray.style.display="none";
