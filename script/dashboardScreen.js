@@ -54,27 +54,22 @@ window.addEventListener("DOMContentLoaded", () => {
         dashbar.style.display="none"
         side_tray.style.display="none"
         setpage.style.display="flex"
+        invoicePage.style.display="none";
     })
     
     invoiceBTN.addEventListener('click',()=>{
         invoicePage.style.display="flex";
         dashbar.style.display="none";
         side_tray.style.display="none";
+        setpage.style.display = "none";
     })
 
     homebtn.addEventListener('click',()=>{
         // Setting to dashboard
-        if (setpage.style.display="flex") {
             setpage.style.display="none";
             dashbar.style.display="flex";
             side_tray.style.display="flex";
-        }
-        // invoice to dashboard
-        if (invoicePage.style.display="flex") {
             invoicePage.style.display="none";
-            dashbar.style.display="flex";
-            side_tray.style.display="flex";
-        }
     })
 
 });
