@@ -4,7 +4,9 @@ let expandMenuBtn,
     menuExpanded = true,
     close_btn, minimize_btn, maximize_btn
     ,AndroidConnect, DBcontent, QRscreen,
-    CloseHTC , settingsbtn ,side_tray , dashbar ,setpage,homebtn;
+    CloseHTC , settingsbtn ,side_tray ,
+    dashbar ,setpage,homebtn, invoiceBTN, invoiceBTN2
+    ,StocksBTN,StockPage;
 const { ipcRenderer } = require("electron");
 window.addEventListener("DOMContentLoaded", () => {
     expandMenuBtn = document.getElementById("expandMenuBtn");
@@ -23,6 +25,11 @@ window.addEventListener("DOMContentLoaded", () => {
     side_tray = document.getElementById('side_tray')
     setpage = document.getElementById('setpage')
     homebtn=document.getElementById("goToHome");
+    invoiceBTN=document.getElementById("invoiceBTN");
+    invoiceBTN2=document.getElementById("new_invo");
+    invoicePage=document.getElementById("invoicePage");
+    StocksBTN=document.getElementById("StocksBTN");
+    StockPage=document.getElementById("StockPage");
 
     minimize_btn.addEventListener("click", () => {
         ipcRenderer.send("dashboard:minimize");
@@ -51,15 +58,39 @@ window.addEventListener("DOMContentLoaded", () => {
         dashbar.style.display="none"
         side_tray.style.display="none"
         setpage.style.display="flex"
+        invoicePage.style.display="none";
+        StockPage.style.display="none";
     })
     
+    invoiceBTN.addEventListener('click',()=>{
+        invoicePage.style.display="flex";
+        dashbar.style.display="none";
+        side_tray.style.display="none";
+        setpage.style.display = "none";
+        StockPage.style.display="none";
+    })
+
+    invoiceBTN2.addEventListener('click', ()=>{
+        invoicePage.style.display="flex";
+        dashbar.style.display="none";
+        side_tray.style.display="none";
+        setpage.style.display = "none";
+    })
+
     homebtn.addEventListener('click',()=>{
         // Setting to dashboard
-        if (setpage.style.display="flex") {
             setpage.style.display="none";
             dashbar.style.display="flex";
             side_tray.style.display="flex";
-        }
+            invoicePage.style.display="none";
+            StockPage.style.display="none";
+    })
+    StocksBTN.addEventListener('click',()=>{
+        dashbar.style.display="none";
+        side_tray.style.display="none";
+        StockPage.style.display="block";
+        invoicePage.style.display="none";
+        setpage.style.display="none";
     })
 
 });
