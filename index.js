@@ -78,30 +78,60 @@ const host = "localhost";
 const port = 8000;
 
 // import sqllite3
-const sqlite3 = require('sqlite3').verbose()
+const sqlite3 = require("sqlite3").verbose();
 
-    // open a database in sql lite 3
-    let db = new sqlite3.Database('database/masterDatabase.db' , (err) => {
-        if(err){ console.log(err.message) }
-        console.log("connected to database")
-    });
-    // db.run(`CREATE TABLE IF NOT EXISTS stocks (barcode int primary key NOT NULL, ProductName varchar(50) NOT NULL, CostPrice decimal(14,3) NOT NULL, SellPrice decimal(14,3) NOT NULL, Profit decimal(14,3), StockQty int NOT NULL, DicountOff decimal(6,3) NOT NULL, UpdatedON datetime)`);
-    db.run(`insert into stocks(Barcode, ProductName, CostPrice, SellPrice, Profit, StockQty, DicountOff) values(123343, 'Amul Doodh', 40, 50, 2.6, 2, 34)`, function(err) {
-        if (err) {
+let db = new sqlite3.Database("database/masterDatabase.db", (err) => {
+  if (err) {
+    console.log(err.message);
+  }
+  console.log("connected to database");
+});
+
+function addItemToStocks(Barcode, ProductName, CostPrice, SellPrice, Profit, StockQty, DicountOff) {
+
+  let datetime = new Date();
+
+  db.run(`INSERT INTO  stocks 
+  (Barcode, ProductName, CostPrice, SellPrice, Profit, StockQty, DicountOff , UpdatedON )
+   VALUES (? , ? , ? , ? , ? , ? , ? , ?)`, [Barcode, ProductName, CostPrice, SellPrice, Profit, StockQty, DicountOff, datetime],
+    function (err) {
+      if (err) {
         return console.log(err.message);
-        }
-        // get the last insert id
-        console.log(`A row has been inserted with rowid ${this.lastID}`);
-        });
-    // db.run(`INSERT INTO sellerinfo (barcode, name, price, quantity, image) VALUES (? ,? ,? ,? ,?)`,["DIvyanshu","JAtin","ka","best","friend"], function(err) {
-    //   if (err) {
-    //   return console.log(err.message);
-    //   }
+      }
       // get the last insert id
-    //   console.log(`A row has been inserted with rowid ${this.lastID}`);
-    //   });
-    db.close()
+      console.log(`A row has been inserted with rowid ${this.lastID}`);
+      db.close();
+    }
 
+  );
+}
+
+function getItemFromStocks(barcode) {
+  db.all(`SELECT * FROM stocks WHERE Barcode = ${barcode}`, function (err, rows) {
+    if (err) {
+      throw err;
+    }
+    rows.forEach((row) => {
+      console.log(row);
+    });
+  });
+}
+
+function searchProduct(productName) {
+  db.all(`SELECT * FROM stocks WHERE ProductName like '%${productName}%'`, function (err, rows) {
+    if (err) {
+      throw err;
+    }
+    rows.forEach((row) => {
+      console.log(row);
+    });
+  });
+  db.close();
+}
+
+console.log(searchProduct("A"));
+console.log(getItemFromStocks(123343));
+//addItemToStocks(1343, "Amul Butter", 400, 500, 20.6, 2, 34);
 
 // import ip from os module
 const { networkInterfaces } = require("os");
@@ -124,9 +154,9 @@ function createServer() {
     // check if url contains ?
     if (urls.includes("?")) {
       // split url and get the first part
-       urls_splitted = urls.split("?")[0];
+      urls_splitted = urls.split("?")[0];
       // parameter part
-       params = urls.split("?")[1];
+      params = urls.split("?")[1];
     }
 
     switch (urls_splitted) {
@@ -155,22 +185,21 @@ function createServer() {
   server.listen(port, host, () => {
     console.log(`Server is running on http://${host}:${port}`);
   });
-
 }
-  // import fs
-  const fs = require("fs");
+// import fs
+const fs = require("fs");
 
-  // open json file and write data to it
-  data = {
-    usernname: "Seller1",
-    email: "jjjgmail.coom",
-    phone: "1234567890",
-    password: "1234567890",
-    bussinessCategory: "Electronics",
-    bussinessName: "jakffibgi",
-    sellerName: "bvfvf",
-  }
-  fs.writeFile("settings/sellerinfo.json" , JSON.stringify(data) , (err) => {   
-    // write data to file
-    if (err) throw err;
-  });
+// open json file and write data to it
+data = {
+  usernname: "Seller1",
+  email: "jjjgmail.coom",
+  phone: "1234567890",
+  password: "1234567890",
+  bussinessCategory: "Electronics",
+  bussinessName: "jakffibgi",
+  sellerName: "bvfvf",
+};
+fs.writeFile("settings/sellerinfo.json", JSON.stringify(data), (err) => {
+  // write data to file
+  if (err) throw err;
+});
