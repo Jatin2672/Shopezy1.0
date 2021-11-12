@@ -81,11 +81,18 @@ const port = 8000;
 const sqlite3 = require('sqlite3').verbose()
 
     // open a database in sql lite 3
-    // let db = new sqlite3.Database('database/sellerinfo1.db' , (err) => {
-    //     if(err){ console.log(err.message) }
-    //     console.log("connected to database")
-    // });
-    // db.run(`CREATE TABLE IF NOT EXISTS sellerinfo (barcode TEXT, name TEXT, price TEXT, quantity TEXT, image TEXT)`);
+    let db = new sqlite3.Database('database/masterDatabase.db' , (err) => {
+        if(err){ console.log(err.message) }
+        console.log("connected to database")
+    });
+    // db.run(`CREATE TABLE IF NOT EXISTS stocks (barcode int primary key NOT NULL, ProductName varchar(50) NOT NULL, CostPrice decimal(14,3) NOT NULL, SellPrice decimal(14,3) NOT NULL, Profit decimal(14,3), StockQty int NOT NULL, DicountOff decimal(6,3) NOT NULL, UpdatedON datetime)`);
+    db.run(`insert into stocks(Barcode, ProductName, CostPrice, SellPrice, Profit, StockQty, DicountOff) values(123343, 'Amul Doodh', 40, 50, 2.6, 2, 34)`, function(err) {
+        if (err) {
+        return console.log(err.message);
+        }
+        // get the last insert id
+        console.log(`A row has been inserted with rowid ${this.lastID}`);
+        });
     // db.run(`INSERT INTO sellerinfo (barcode, name, price, quantity, image) VALUES (? ,? ,? ,? ,?)`,["DIvyanshu","JAtin","ka","best","friend"], function(err) {
     //   if (err) {
     //   return console.log(err.message);
@@ -93,7 +100,7 @@ const sqlite3 = require('sqlite3').verbose()
       // get the last insert id
     //   console.log(`A row has been inserted with rowid ${this.lastID}`);
     //   });
-    // db.close()
+    db.close()
 
 
 // import ip from os module
