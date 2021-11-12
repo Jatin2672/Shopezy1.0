@@ -129,8 +129,8 @@ function searchProduct(productName) {
   db.close();
 }
 
-console.log(searchProduct("A"));
-console.log(getItemFromStocks(123343));
+// console.log(searchProduct("A"));
+// console.log(getItemFromStocks(123343));
 //addItemToStocks(1343, "Amul Butter", 400, 500, 20.6, 2, 34);
 
 // import ip from os module
@@ -142,11 +142,14 @@ function logIP() {
       .concat(...Object.values(networkInterfaces()))
       .find((details) => details.family === "IPv4" && !details.internal)
       .address;
-  console.log(getLocalExternalIP() + ":8000/connected");
+  dashboardWindow.webContents.send("ip", getLocalExternalIP() + ":8000/connected")
 }
+// sending ip when asked by dasboardScreen.js
+ipcMain.on("giveip",()=>{
+  logIP();
+})
 
 function createServer() {
-  logIP();
   const requestListener = function (req, res) {
     const urls = req.url;
     let urls_splitted, params;

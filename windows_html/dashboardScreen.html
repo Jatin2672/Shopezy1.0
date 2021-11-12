@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../style/dashBoardscreen.css">
   <script src="../Graph/p5.js"></script>
   <script src="../Graph/sketch.js"></script>
+  <script src="../script/qrcode.min.js"></script>
   <title>Dashboard</title>
 </head>
 
@@ -241,7 +242,7 @@
           </div>
           <div class="part2">
               <h1>Scan To Connect</h1>
-              <img src="../Media/Qr.svg" alt="">
+              <div id="qrcode"></div>
               <div class="sign_txt"><input type="checkbox" name="Keep me sign in" id="sign"><p>Keep me signed in</p></div>
           </div>
           <div id="close_htc"><img src="../Media/close.svg" alt="" id="close_btn_htc"></div>
@@ -252,6 +253,21 @@
    style="display: none;"></object>
    <object id="invoicePage" class="otherpages" data="../dashboard/Analytics/invoice.html" type="text/html" style="display: none;"></object>
    <object id="StockPage" class="otherpages" data="../dashboard/Analytics/stocks.html" type="text/html" style="display: none;"></object>
+   <div id="hiddenIP" style="display: none;"></div>
 </body>
+<script type="text/javascript" defer>
+  // qr generated when clicked on connect btn.also getting the ip from hiddenIP
+  document.getElementById("Connect_btn").addEventListener('click',()=>{
 
+    let url=document.getElementById("hiddenIP").innerHTML
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: url,
+      width: 256,
+      height: 256,
+      colorDark : "#ffffff",
+      colorLight : "#393E3A",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+  })
+  </script>
 </html>

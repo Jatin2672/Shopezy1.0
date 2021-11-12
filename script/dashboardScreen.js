@@ -92,6 +92,13 @@ window.addEventListener("DOMContentLoaded", () => {
         invoicePage.style.display="none";
         setpage.style.display="none";
     })
+    // getting ip from index.js
+    ipcRenderer.send("giveip")
+    // setting ip in hiddenIP div
+    ipcRenderer.on("ip", (e,url)=>{
+        console.log(url)
+       document.getElementById("hiddenIP").innerHTML=url;
+    })
 
 });
 function collapseExpandMenu() {
