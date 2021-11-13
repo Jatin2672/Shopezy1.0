@@ -73,9 +73,7 @@ ipcMain.on("go_to_dashboard", (event, arg) => {
 });
 
 // -------------------------------RESTRICTED AREA---------------------------------------------//
-const http = require("http");
-const host = "localhost";
-const port = 8000;
+
 
 // import sqllite3
 const sqlite3 = require("sqlite3").verbose();
@@ -135,19 +133,29 @@ function searchProduct(productName) {
 
 // import ip from os module
 const { networkInterfaces } = require("os");
-
-function logIP() {
-  const getLocalExternalIP = () =>
+let    getLocalExternalIP = () =>
     []
       .concat(...Object.values(networkInterfaces()))
       .find((details) => details.family === "IPv4" && !details.internal)
       .address;
-  dashboardWindow.webContents.send("ip", getLocalExternalIP() + ":8000/connected")
+function logIP() {
+  dashboardWindow.webContents.send("ip", getLocalExternalIP() + ":" + port)
 }
 // sending ip when asked by dasboardScreen.js
 ipcMain.on("giveip",()=>{
   logIP();
 })
+
+// import os 
+const os = require("os");
+// write a function to get name of device
+function getDeviceName() {
+  return os.hostname();
+}
+
+const http = require("http");
+const host = getLocalExternalIP();
+const port = 8080;
 
 function createServer() {
   const requestListener = function (req, res) {
@@ -160,12 +168,13 @@ function createServer() {
       urls_splitted = urls.split("?")[0];
       // parameter part
       params = urls.split("?")[1];
+    }else{
+      urls_splitted = urls;
     }
-
     switch (urls_splitted) {
       case "/connect":
         res.writeHead(200);
-        res.end("connected Successfully");
+        res.end("CONNECTED:"+getDeviceName());
         console.log(params);
         break;
       case "/addItem":
