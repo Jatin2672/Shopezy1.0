@@ -175,7 +175,9 @@ function createServer() {
       case "/connect":
         res.writeHead(200);
         res.end("CONNECTED:"+getDeviceName());
-        console.log(params);
+        if(params.includes("name")) deviceName = params.split("=")[1]
+        console.log(deviceName);
+        dashboardWindow.webContents.send("deviceName", deviceName);
         break;
       case "/addItem":
         res.writeHead(200);

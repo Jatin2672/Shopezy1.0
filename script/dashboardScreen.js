@@ -100,6 +100,14 @@ window.addEventListener("DOMContentLoaded", () => {
        document.getElementById("hiddenIP").innerHTML=url;
     })
 
+    ipcRenderer.on("deviceName", (e,deviceName)=>{
+        document.getElementById("connectionProperties").innerHTML = "Connected to " + deviceName
+        document.getElementById("connectionProperties").style.color = "green"
+        document.getElementById("connection_icon").style.filter = "grayscale(100%)"
+        document.getElementById("Connect_btn").value = "Disconnect"
+        CloseHTC.click();
+        
+    })
 });
 function collapseExpandMenu() {
     allSpans = document.getElementById("tray").getElementsByTagName("span");

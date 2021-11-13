@@ -268,7 +268,6 @@ body{
     justify-content: space-evenly;
 }
 .and_cont{
-    color: #FF4D6D;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
