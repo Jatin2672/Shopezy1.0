@@ -1,6 +1,6 @@
 // main.js
 
-const { ipcMain, app, BrowserWindow } = require("electron");
+const { ipcMain, app, BrowserWindow, Menu } = require("electron");
 const path = require("path");
 
 let welcomeWindow, dashboardWindow;
@@ -31,9 +31,10 @@ function createdashboardWindow() {
       preload: path.join(__dirname, "script/dashboardScreen.js"),
     },
   });
-
+  
   dashboardWindow.loadFile("windows_html/dashboardScreen.html");
   dashboardWindow.maximize();
+  
 }
 app.whenReady().then(() => {
   createWelcomeWindow();

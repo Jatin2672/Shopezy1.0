@@ -60,12 +60,9 @@
 .part1 h1{
     text-align: left;
 }
-<<<<<<< Updated upstream
 #close_btn{
     cursor: pointer;
 }
 #close_btn:hover{
     background-color: red;
 }
-=======
->>>>>>> Stashed changes

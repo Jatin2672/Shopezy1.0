@@ -267,7 +267,7 @@ body{
     height: 15%;
     justify-content: space-evenly;
 }
-.and_cont{
+.and_cont{                                     
     display: flex;
     justify-content: space-between;
     font-size: 14px;
